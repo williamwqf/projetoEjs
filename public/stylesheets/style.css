@@ -80,3 +80,7 @@ div.rodape {
   font-size: large;
   color: darkgrey;
 }
+
+img.contatos_sobre {
+  width: 100vw;
+}

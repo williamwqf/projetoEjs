@@ -1,0 +1,15 @@
+<% include header.html %>
+
+    <div class="sobre_texto_titulo">
+        Administração do Site - Acesso Restrito
+    </div>
+
+    <form action="/restrito" method="POST">
+        <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome">
+        <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha">
+        <button type="submit">Enviar</button>
+    </form>
+
+<% include footer.html %>

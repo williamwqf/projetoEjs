@@ -1,0 +1,82 @@
+div.area_logo {
+  background-color: #3e3e3e;
+}
+
+img.logo {
+  margin: 0 auto;
+  width: 10vw;
+  max-width: 100%;
+}
+
+div.tela_area_central {
+  max-width: 100vw;
+  max-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+div.sobre_texto {
+  padding: 20px;
+  max-width: 100vw;
+  height: 30vh;
+}
+
+div.sobre_texto_titulo {
+  height: 10vh;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+div.sobre_texto_detalhe {
+  height: 30vh;
+  font-size: 1.1rem;
+}
+
+div.detalhe_sobre_pai {
+  margin: 10px auto;
+  width: 98vw;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+div.detalhe_sobre_filho {
+  width: 31vw;
+  padding: 5px;
+  margin: 5px;
+  background-color: #f8f9fa;
+  font-size: 0.8rem;
+}
+
+div.rodape {
+  font-size: 0.7rem;
+  width: 100vw;
+  height: 5vh;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-buy {
+  background-color: #f5401a;
+}
+.btn-font {
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+  font-family: Roboto;
+}
+.price {
+  font-weight: bold;
+  font-size: large;
+  color: forestgreen;
+}
+.price-card {
+  color: black;
+  font-weight: bold;
+}
+.price-old {
+  font-size: large;
+  color: darkgrey;
+}

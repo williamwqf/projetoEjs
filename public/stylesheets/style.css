@@ -112,3 +112,7 @@ div.container_filho_produtos {
 img.foto_produto {
   width: 100%;
 }
+
+div.texto_produto_titulo {
+  font-weight: 500;
+}

@@ -1,31 +1,25 @@
 <% include header.html %>
 
-    <div>
-                  <% for (let index=0; index < cadprod.length ; index++) { %>
+  <div class="container_pai_produtos">
 
-                    <div class="container-md-8">
-                      <div class="row py-2">
-                          <div class="card-group">
-                            
-                              <div class="card bg-light  " style="width: 20rem;padding:10px; margin: 5px;">
-                                <a href="/detalhes"><img class="card_img" src="/images/produtos/<%= cadprod[index].codigo %>.jpg"></a>
+      <% for (let index=0; index < cadprod.length ; index++) { %>
+                
+                  <div class="container_filho_produtos">
 
-                                  <div class="card-body ">
-                                    <h5><%= cadprod[index].descricao %></h5>
-                                    <p><%= cadprod[index].marca %></p>
-                                    <p><%= cadprod[index].modelo %></p>
-                                    <h5><%= cadprod[index].preco %></h5>
-                                    <br>
-                                    <a href="/detalhes">Comprar</a>
-                                  </div>  
-                              </div>
-
-                          </div>
+                      <div class="card-foto">
+                        <a href="/detalhes"><img class="foto_produto" src="/images/produtos/<%= cadprod[index].codigo %>.jpg"></a>
                       </div>
-                    </div>
 
-                  <% } %>
+                      <div class="card-texto">
+                        <div> <%= cadprod[index].descricao %> </div>
+                        <div><%= cadprod[index].marca %></div>
+                        <div><%= cadprod[index].modelo %></div>
+                        <div>Preço: <%= cadprod[index].preco %></div>
+                      </div>  
+                  </div>
 
-  </div>
+        <% } %>
+
+    </div>
 
 <% include footer.html %>

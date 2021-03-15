@@ -139,3 +139,20 @@ div.form-signin {
   padding: 30px;
   height: 75vh;
 }
+
+.pai {
+  display: flex;
+  align-items: center;
+}
+.descricao {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+em {
+  color: green;
+  font-weight: bold;
+}
+
+.titulo1 {
+  font-weight: bold;
+}

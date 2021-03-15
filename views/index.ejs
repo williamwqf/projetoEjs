@@ -1,12 +1,132 @@
 <% include header.html %>
 
-    <form action="/login" method="POST">
-        <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome">
-        <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha">
-        <button type="submit">Enviar</button>
-    </form>
+<div class="container-fluid">
+    <div
+      id="carouselExampleIndicators"
+      class="carousel carousel-dark slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="3"
+        aria-label="Slide 4"
+      ></button>
+      <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="4"
+      aria-label="Slide 5"
+    ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center">
+            <a href="./detalhes.html">
+              <img
+                src="https://a-static.mlcdn.com.br/618x463/tenis-feminino-bordado-fe-branco-salto-plataforma-anabela-casual-dia-a-dia-gugi-calcados/gugicalcados/pfe-branco-34-ale2/18fecf4b1a14b7f51be07493f441b6a0.jpg"
+                class="d-block carousel-img"
+                alt="..."
+              />
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <a href="./detalhes.html">
+              <img
+                src="https://static.netshoes.com.br/produtos/tenis-nike-renew-elevate/26/HZM-4098-026/HZM-4098-026_zoom1.jpg?ts=1592995188&"
+                class="d-block carousel-img"
+                alt="..."
+              />
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <a href="./detalhes.html">
+              <img
+                src="https://static.netshoes.com.br/produtos/tenis-olympikus-quasar-masculino/88/D22-3580-788/D22-3580-788_zoom1.jpg?ts=1601414754&"
+                class="d-block carousel-img"
+                alt="..."
+              />
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <a href="./detalhes.html">
+              <img
+                src="https://static.netshoes.com.br/produtos/tenis-nike-renew-elevate/02/HZM-4098-002/HZM-4098-002_zoom1.jpg?ts=1613081621&"
+                class="d-block carousel-img"
+                alt="..."
+              />
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <a href="./detalhes.html">
+              <img
+                src="https://static.netshoes.com.br/produtos/tenis-adidas-breaknet-masculino/26/NQQ-4378-026/NQQ-4378-026_zoom1.jpg?ts=1602007257"
+                class="d-block carousel-img"
+                alt="..."
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  
+    <div class="container container_pai_produtos">
+
+        <% for (let index=0; index < cadprod.length ; index++) { %>
+                    
+            <% include card.ejs %>            
+
+        <% } %>
+
+    </div>
 
 <% include footer.html %>
 

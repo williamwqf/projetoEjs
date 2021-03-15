@@ -116,3 +116,7 @@ img.foto_produto {
 div.texto_produto_titulo {
   font-weight: 500;
 }
+
+.carousel-img {
+  height: 50vh;
+}

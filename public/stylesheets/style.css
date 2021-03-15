@@ -1,11 +1,25 @@
 div.area_logo {
   background-color: #3e3e3e;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
-
 img.logo {
   margin: 0 auto;
-  width: 10vw;
-  max-width: 100%;
+  max-height: 10vh;
+}
+
+div.barra_logo {
+  width: 90%;
+}
+
+div.barra_restrito {
+  width: 10%;
+}
+
+img.restrito {
+  margin: 0 auto;
+  max-height: 8vh;
 }
 
 div.tela_area_central {
@@ -119,4 +133,9 @@ div.texto_produto_titulo {
 
 .carousel-img {
   height: 50vh;
+}
+
+div.form-signin {
+  padding: 30px;
+  height: 75vh;
 }

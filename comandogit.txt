@@ -1,0 +1,10 @@
+Primeiro git pull origin master
+Depois git add .
+Depois git commit -m 'texto'
+Depois git push origin master
+instalar o EJS:
+1.npm install express-generator -g
+2.express --view=ejs 'nome da pasta'
+ 
+Rodar página ejs 
+nodemon ./bin/www

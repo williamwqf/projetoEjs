@@ -1,7 +1,7 @@
-const cadprod = [
+[
     {
-        codigo: '1',
-        descricao: "Mizuno Wave Sky 3 Masculino Corrida",
+        "codigo": "1",
+        "descricao": "Mizuno Wave Sky 3 Masculino Corrida",
         marca: "Mizuno",
         modelo: "Wave Sky 3",
         cor: "Azul",

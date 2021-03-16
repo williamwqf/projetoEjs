@@ -1,7 +1,7 @@
 <div class="container_filho_produtos">
 
     <div class="card-foto">
-      <a href="/detalhes2"><img class="foto_produto" src="/images/produtos/<%= cadprod[index].codigo %>.jpg"></a>
+      <a href="/detalhes2/<%= cadprod[index].codigo %>"><img class="foto_produto" src="/images/produtos/<%= cadprod[index].codigo %>.jpg"></a>
     </div>
 
     <div class="card-texto">
@@ -9,6 +9,5 @@
       <div>Marca: <%= cadprod[index].marca %></div>
       <div>Modelo: <%= cadprod[index].modelo %></div>
       <div>Preço: <%= cadprod[index].preco %></div>
-      <% cod = cadprod[index].codigo %>
     </div>
 </div>

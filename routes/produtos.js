@@ -6,7 +6,7 @@ const cadprod = require('../static-database/cad_produtos.json')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('produtos', {cadprod:JSON.parse(cadprod)});
+  res.render('produtos', {cadprod});
 });
 
 module.exports = router;

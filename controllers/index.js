@@ -1,6 +1,6 @@
-const cadprod = require('../models/Produtos');
+const { cadprod } = require('../models/Produtos');
 
-function index(req, res, next) {
+const index = (req, res, next) => {
     res.render('index', { cadprod });
 };
 

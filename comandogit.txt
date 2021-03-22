@@ -8,3 +8,4 @@ instalar o EJS:
  
 Rodar página ejs 
 nodemon ./bin/www
+<%- include(./partials/arquivo) %>

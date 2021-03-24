@@ -1,15 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const controller = require('../controllers/login')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('login');
-});
+router.get('/', controller.login);
 
 /* POST home page. */
-router.post('/', function(req, res, next) {
-    const form = JSON.stringify(req.body)
-    res.send(form);
-});
+router.post('/', controller.postForm);
 
 module.exports = router;

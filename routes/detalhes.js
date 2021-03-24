@@ -5,6 +5,7 @@ const cadprod = require('../static-database/cad_produtos.json')
 
 /* GET home page. */
 router.get('/', function(req, res, next ) {
+  console.log(cadprod);
   res.render('detalhes', { cadprod });
 });
 

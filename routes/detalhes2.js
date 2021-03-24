@@ -13,7 +13,7 @@ const cadprod = cadprods();
 /* GET home page. */
 router.get('/:id', function(req, res, next ) {
   console.log('ID:', req.params.id);
-  res.render('detalhes2', {cadprod});
+  res.render('detalhes2', {cadprod, index: req.params.id - 1});
 });
 
 module.exports = router;

@@ -1,9 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const controller = require('../controllers/restrito')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('restrito', { title: 'Express' });
-});
+router.get('/', controller.restrito)
 
 module.exports = router;

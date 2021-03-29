@@ -1,12 +1,56 @@
-const login = (req, res) => {
-    res.render('login');
-}
+const { validationResult } = require('express-validator');
+const model = require('../models/login');
 
-const postForm = (req, res) => {
-    const form = JSON.stringify(req.body)
-    res.send(form);
+const index = (req, res) => {
+  res.render('login/index');
+};
+
+const cadastro = (req, res) => {
+  res.render('login/cadastro');
+};
+
+const novoCadastro = (req, res) => {
+
+  const errors = validationResult(req); 
+
+  if (!errors.isEmpty()) {
+      return res.render('login/cadastro', errors);
   }
 
+  const usuarioDoFormulario = { 
+    email: req.body.email, 
+    password: req.body.password,
+    confirmPassword: req.body['confirm-password']
+  };
+
+  const usuarioCadastrado = model.cadastrarUsuario(usuarioDoFormulario);
+    res.send(`Novo cadastro: ${JSON.stringify(usuarioCadastrado)}`);
+};
+
+
+const entrar = (req, res) => {
+  console.log(req.body);
+  const usuarioDoFormulario = { 
+    email: req.body.email, 
+    password: req.body.password
+  };
+
+  if (model.validarEntrada(usuarioDoFormulario)) 
+    { 
+      res.render('login/entrar');
+    }
+};
+
+
+const bemVindo = (req, res) => {
+  res.render('login/entrar');
+};
+
+
 module.exports = {
-    login, postForm
+  cadastro,
+  entrar,
+  index,
+  novoCadastro,
+  bemVindo,
 };

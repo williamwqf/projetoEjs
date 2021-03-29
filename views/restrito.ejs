@@ -1,34 +1,10 @@
 <%- include('./partials/header_restrito') %>
 
-<div class="form-signin">
-  <h1 class="h3 mb-3 fw-normal">Administração do Site - Acesso Restrito</h1>
-  <br />
-  <h3 class="h3 mb-3 fw-normal">Informe seus dados para acesso:</h3>
-
-  <form method="POST" action="/login/entrar">
-    <label for="inputEmail" class="visually-hidden">E-mail</label>
-    <input
-      type="email"
-      name="email"
-      id="inputEmail"
-      class="form-control"
-      placeholder="Digite seu e-mail"
-      required
-      autofocus
-    />
-
-    <label for="inputPassword" class="visually-hidden">Senha</label>
-    <input
-      type="password"
-      name="password"
-      id="inputPassword"
-      class="form-control"
-      placeholder="Digite sua senha"
-      required
-    />
-
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
-  </form>
-</div>
+    <main role="main" class="container">
+      <h1 class="mt-5">Seja bem-vindo</h1>
+      <p class="lead">Você está na página inicial, realize seu login!</p>
+      <a class="btn btn-primary" role="button" href="/login">Entrar</a>      
+      <a class="btn btn-warning" role="button" href="/login/cadastro">Cadastrar</a>      
+    </main>
 
 <%- include('./partials/footer') %>

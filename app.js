@@ -3,7 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-global.cod = "1";
+
+const { validationResult } = require('express-validator');
+const errors = "";
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

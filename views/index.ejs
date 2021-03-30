@@ -22,7 +22,7 @@
       <% for (let index=0; index < cadprod.length ; index++) { %>
       <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
         <div class="d-flex justify-content-center">
-          <a href="./detalhes.html">
+          <a href="/detalhes/<%= cadprod[index].codigo %>">
             <img
               src="/images/produtos/<%= cadprod[index].codigo %>.jpg"
               class="d-block carousel-img"

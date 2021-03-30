@@ -1,7 +1,6 @@
 <div class="container_filho_produtos">
-
     <div class="card-foto">
-      <a href="/detalhes/<%= cadprod[index].codigo %>"><img class="foto_produto" src="/images/produtos/<%= cadprod[index].codigo %>.jpg"></a>
+      <a href="/detalhes/<%= cadprod[index].codigo %>"><img class="foto_produto" src="/images/produtos/<%= cadprod[index].codigo %>.jpg" onmouseover="this.src='/images/produtos/<%= cadprod[index].codigo %>_1.jpg'" onmouseout="this.src='/images/produtos/<%= cadprod[index].codigo %>.jpg'"></a>
     </div>
 
     <div class="card-texto">

@@ -1,22 +1,17 @@
 <%- include('../partials/header_restrito') %>
-
-    <main class="form-signin">
+<div class="area_central">
+  <div class="loginCadastro_credenciais">
         <h1 class="h3 mb-3 fw-normal">Cadastre-se</h1>
-  
         <form method="POST" action="/login/cadastro">                
             <label for="inputEmail" class="visually-hidden">E-mail</label>
             <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Digite seu e-mail" required autofocus>
-            
             <label for="inputPassword" class="visually-hidden">Senha</label>
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Digite sua senha" required>
-  
             <label for="inputConfirmPassword" class="visually-hidden">Confirme sua senha</label>
             <input type="password" name="confirm-password" id="inputConfirmPassword" class="form-control" placeholder="Confirme sua senha" required>
-            
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Cadastrar agora!</button>          
-  
             <br>
-            <br>          
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Cadastrar agora!</button>            
+            <br>
             <ul>
               <% if (typeof(errors)!='undefined') { %>
                 <% errors.forEach((errors)=> { %>
@@ -24,11 +19,7 @@
                 <% }) %>
               <% } %>
             </ul>
-            <br>
-  
           </form>
-  
-          <p class="mt-5 mb-3 text-muted">&copy; NextDigital 2021</p>     
-      </main>
-
+    </div>
+</div>
 <%- include('../partials/footer') %>

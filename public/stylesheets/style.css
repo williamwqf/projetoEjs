@@ -29,6 +29,18 @@ div.tela_area_central {
   align-items: center;
 }
 
+div.area_central {
+  padding: 10px;
+  width: 100vw;
+  height: 76vh;
+}
+
+div.sobre {
+  padding: 10px;
+  width: 100vw;
+  height: 100vh;
+}
+
 div.sobre_texto {
   padding: 20px;
   max-width: 100vw;
@@ -70,6 +82,12 @@ div.rodape {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+div.loginCadastro_credenciais {
+  padding: 10px;
+  width: 40vw;
+  height: 76vh;
 }
 
 .btn-buy {

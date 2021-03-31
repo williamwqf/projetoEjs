@@ -1,14 +1,27 @@
 <div class="area_central">
-  <div class="container_filho_produtos">
-    <div class="card-foto">
-      <img class="foto_produto" src="/images/produtos/<%= cadprod[index].codigo %>.jpg">
-    </div>
-    <div class="card-texto">
-      <div class="texto_produto_titulo"><%= cadprod[index].descricao %> </div>
-      <div>Marca: <%= cadprod[index].marca %></div>
-      <div>Modelo: <%= cadprod[index].modelo %></div>
-      <div>Estilo/Esporte: <%= cadprod[index].estilo_esporte %></div>
-      <div>Preço: <%= cadprod[index].preco %></div>
+
+  <div class="card mb-3" style="max-width: 800px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img class="card-img-top" src="/images/produtos/<%= cadprod[index].codigo %>.jpg" onmouseover="this.src='/images/produtos/<%= cadprod[index].codigo %>_1.jpg'" onmouseout="this.src='/images/produtos/<%= cadprod[index].codigo %>.jpg'">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+            <h5 class="card-title"><%= cadprod[index].descricao %></h5>
+            <p class="card-text">
+              Marca: <%= cadprod[index].marca %><br>
+              Modelo: <%= cadprod[index].modelo %><br>
+              Estilo/Esporte: <%= cadprod[index].estilo_esporte %><br>
+              Cor: <%= cadprod[index].cor %><br>
+              Tamanho: <%= cadprod[index].tamanho %><br>        
+              Preço: <%= cadprod[index].preco %>
+            </p>
+          <a href="#">
+            <button type="button" class="btn btn-danger">Comprar - em breve!</button>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
+
 </div>

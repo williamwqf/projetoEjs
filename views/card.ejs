@@ -1,12 +1,12 @@
-<div class="container_filho_produtos">
-    <div class="card-foto">
-      <a href="/detalhes/<%= cadprod[index].codigo %>"><img class="foto_produto" src="/images/produtos/<%= cadprod[index].codigo %>.jpg" onmouseover="this.src='/images/produtos/<%= cadprod[index].codigo %>_1.jpg'" onmouseout="this.src='/images/produtos/<%= cadprod[index].codigo %>.jpg'"></a>
-    </div>
-
-    <div class="card-texto">
-      <div class="texto_produto_titulo"><%= cadprod[index].descricao %> </div>
-      <div>Marca: <%= cadprod[index].marca %></div>
-      <div>Modelo: <%= cadprod[index].modelo %></div>
-      <div>Preço: <%= cadprod[index].preco %></div>   
+<div class="card" style="width: 18rem;"">
+    <a href="/detalhes/<%= cadprod[index].codigo %>"><img class="card-img-top" src="/images/produtos/<%= cadprod[index].codigo %>.jpg" onmouseover="this.src='/images/produtos/<%= cadprod[index].codigo %>_1.jpg'" onmouseout="this.src='/images/produtos/<%= cadprod[index].codigo %>.jpg'"></a>
+    <div class="card-body">
+      <h5 class="card-title"><%= cadprod[index].descricao %></h5>
+      <p class="card-text">
+        Marca: <%= cadprod[index].marca %><br>
+        Modelo: <%= cadprod[index].modelo %><br>
+        Preço: <%= cadprod[index].preco %>
+      </p>
+      <a href="/detalhes/<%= cadprod[index].codigo %>" class="btn btn-primary">Ver Produto</a>
     </div>
 </div>

@@ -90,29 +90,6 @@ div.loginCadastro_credenciais {
   height: 76vh;
 }
 
-.btn-buy {
-  background-color: #f5401a;
-}
-.btn-font {
-  color: white;
-  font-size: larger;
-  font-weight: bold;
-  font-family: Roboto;
-}
-.price {
-  font-weight: bold;
-  font-size: large;
-  color: forestgreen;
-}
-.price-card {
-  color: black;
-  font-weight: bold;
-}
-.price-old {
-  font-size: large;
-  color: darkgrey;
-}
-
 img.contatos_sobre {
   width: 100vw;
 }

@@ -1,0 +1,1 @@
+npx sequelize model:generate --name Produtos --attributes descricao:string, marca:string ,preco:decimal,role:string

@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "aula2",
+    "database": "next_digital",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

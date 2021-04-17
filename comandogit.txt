@@ -9,3 +9,4 @@ instalar o EJS:
 Rodar página ejs 
 nodemon ./bin/www
 <%- include(./partials/arquivo) %>
+npx sequelize model:generate --name cad_produtos --attributes descricao:string,marca:string,modelo:string,cor:string,tamanho:string,genero:string,estilo:string,preco:decimal

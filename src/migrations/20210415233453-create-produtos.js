@@ -11,24 +11,18 @@ module.exports = {
       descricao: {
         type: Sequelize.STRING
       },
-      marca: {
-        type: Sequelize.STRING
-      },
+ 
       modelo: {
         type: Sequelize.STRING
       },
-      cor: {
-        type: Sequelize.STRING
-      },
+    
       tamanho: {
         type: Sequelize.STRING
       },
       genero: {
         type: Sequelize.STRING
       },
-      estilo: {
-        type: Sequelize.STRING
-      },
+    
       preco: {
         type: Sequelize.DECIMAL
       },

@@ -13,7 +13,9 @@ module.exports = {
           tamanho: '40',
           genero: 'Masculino',
           estilo_id: 1,
-          preco: 240.00
+          preco: 240.00,
+          createdAt: new Date(),
+          updatedAt: new Date()
         },
         {
           descricao: 'Asics Raiden 2 Masculino Caminhada',
@@ -23,7 +25,9 @@ module.exports = {
           tamanho: '42',
           genero: 'Masculino',
           estilo_id: 2,
-          preco: 199.90
+          preco: 199.90,
+          createdAt: new Date(),
+          updatedAt: new Date()
         },
         {
           descricao: 'Tênis Fila Interceptor Feminino Academia',
@@ -33,7 +37,9 @@ module.exports = {
           tamanho: '36',
           genero: 'Feminino',
           estilo_id: 3,
-          preco: 159.99
+          preco: 159.99,
+          createdAt: new Date(),
+          updatedAt: new Date()
         },
         {
           descricao: 'Under Armour Sc 3zero Iv Masculino Basquete',
@@ -43,7 +49,9 @@ module.exports = {
           tamanho: '44',
           genero: 'Masculino',
           estilo_id: 4,
-          preco: 650.00
+          preco: 650.00,
+          createdAt: new Date(),
+          updatedAt: new Date()
         },
         {
           descricao: 'Puma St Runner V2 Nl Feminino Casual',
@@ -53,7 +61,9 @@ module.exports = {
           tamanho: '34',
           genero: 'Feminino',
           estilo_id: 5,
-          preco: 279.90
+          preco: 279.90,
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
 
 

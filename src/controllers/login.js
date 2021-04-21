@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const model = require('../models/login');
+// const model = require('../models/login');
 
 const index = (req, res) => {
   res.render('login/index');

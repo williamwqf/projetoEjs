@@ -13,12 +13,12 @@ module.exports = (sequelize, DataTypes) => {
   };
   Produtos.init({
     descricao: DataTypes.STRING,
-    marca: DataTypes.STRING,
+    marca_id: DataTypes.INTEGER,
     modelo: DataTypes.STRING,
-    cor: DataTypes.STRING,
+    cor_id: DataTypes.INTEGER,
     tamanho: DataTypes.STRING,
     genero: DataTypes.STRING,
-    estilo: DataTypes.STRING,
+    estilo_id: DataTypes.INTEGER,
     preco: DataTypes.DECIMAL
   }, {
     sequelize,

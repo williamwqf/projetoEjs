@@ -1,4 +1,5 @@
-const {Produtos} = require('../models')
+const {buscaProdutos} = require('../models/produtos')
+
 
 const listarProdutos = async (req, res) => {
     const produtos = await Produtos.findAll();
@@ -6,15 +7,16 @@ const listarProdutos = async (req, res) => {
 
 }
 
-const buscaProdutos = async(req, res) => {
-    const {id} = req.params
-    const produtos = await Produtos.findOne({
-        where: {
-            id: id
-        }
+const buscaProduto = async(req, res) => {
+    try {
+        const {id} = req.params
+        const produtos = await Produtos.buscaProdutos(id);
+        res.json(produtos);
         
-    });
-    res.json(produtos);
+    } catch (err) {
+        res.json({error: err.message});
+        
+    }
 
 }
 const inserirProdutos = async(req, res) => {
@@ -103,7 +105,7 @@ const atualizarProduto = async(req, res) => {
 
 module.exports = {
     listarProdutos,
-    buscaProdutos,
+    buscaProduto,
     inserirProdutos,
     inserirProdutosForms,
     atualizarProduto,

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { cadprod } = require('../models/Produtos');
+const { cadprod } = require('../models/produtos');
 
 const exibirProduto = (req, res) => {
     console.log('ID:', req.params.id);

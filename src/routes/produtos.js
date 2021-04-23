@@ -6,7 +6,7 @@ const controller = require('../controllers/produtos')
 
 router.get('/', controller.listarProdutos);
 
-router.get('/:id', controller.buscaProdutos);
+router.get('/:id', controller.buscaProduto);
 router.post('/', controller.inserirProdutos);
 router.post('/form', controller.inserirProdutosForms);
 router.put('/:id', controller.atualizarProduto);

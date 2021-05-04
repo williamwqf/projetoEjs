@@ -1,0 +1,1 @@
+const cores = 2

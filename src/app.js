@@ -10,17 +10,17 @@ const errors = "";
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
-var sobreRouter = require('./routes/sobre');
+// var sobreRouter = require('./routes/sobre');
 var produtosRouter = require('./routes/produtos');
-var restritoRouter = require('./routes/restrito');
-var detalhesRouter = require('./routes/detalhes');
+// var restritoRouter = require('./routes/restrito');
+// var detalhesRouter = require('./routes/detalhes');
 
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -31,12 +31,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
-app.use('/sobre', sobreRouter);
+// app.use('/sobre', sobreRouter);
 app.use('/produtos', produtosRouter);
-app.use('/restrito', restritoRouter);
-app.use('/detalhes', detalhesRouter);
-
-
+// app.use('/restrito', restritoRouter);
+// app.use('/detalhes', detalhesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -50,8 +48,8 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+  res.status(err.status || 500).json({error: err.message});
+  // res.render('error');
 });
 
 module.exports = app;

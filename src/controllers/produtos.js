@@ -1,29 +1,27 @@
-const {buscaProdutos} = require('../models/produtos')
+const { buscaProdutos } = require('../models/produtos');
 
-
-const listarProdutos = async (req, res) => {
-    const produtos = await Produtos.findAll();
-    res.json(produtos);
-
-}
-
-const buscaProduto = async(req, res) => {
+const listarProdutos = async (req, res, next) => {
     try {
-        const {id} = req.params
-        const produtos = await Produtos.buscaProdutos(id);
+        const produtos = await Produtos.findAll();
         res.json(produtos);
-        
-    } catch (err) {
-        res.json({error: err.message});
-        
+    } catch (error) {
+        next(error);
     }
-
 }
-const inserirProdutos = async(req, res) => {
-    
-    
-    const novo_produto = {
-       
+
+const buscaProduto = async (req, res, next) => {
+    try {
+        const { id } = req.params
+        const produtos = await buscaProdutos(id);
+        res.json(produtos);
+    } catch (error) {
+        next(error);
+    }
+}
+
+const inserirProdutos = async (req, res, next) => {
+    try {
+        const novo_produto = {
             descricao: 'Nike Blaster',
             marca_id: 1,
             modelo: 'Blaster',
@@ -34,18 +32,20 @@ const inserirProdutos = async(req, res) => {
             preco: 150.00,
             createdAt: new Date(),
             updatedAt: new Date()
-          
+    
+        }
+        const produtos = await Produtos.create(novo_produto);
+        res.status(201).json(produtos);
+    } catch (error) {
+        next(error);
     }
-    const produtos = await Produtos.create(novo_produto);
-    res.json(produtos);
-
 }
 
-const inserirProdutosForms = async(req, res) => {
-    const {descricao, marca_id, cor_id, modelo, tamanho, genero, estilo_id, preco} = req.body;
+const inserirProdutosForms = async (req, res, next) => {
+    try {
+        const { descricao, marca_id, cor_id, modelo, tamanho, genero, estilo_id, preco } = req.body;
     
-    const novo_produto = {
-       
+        const novo_produto = {
             descricao,
             marca_id,
             modelo,
@@ -55,20 +55,21 @@ const inserirProdutosForms = async(req, res) => {
             estilo_id,
             preco,
             createdAt: new Date(),
-            updatedAt: new Date()
-          
+            updatedAt: new Date()    
+        }
+        const produtos = await Produtos.create(novo_produto);
+        res.status(201).json(produtos);
+    } catch (error) {
+        next(error);
     }
-    const produtos = await Produtos.create(novo_produto);
-    res.json(produtos);
-
 }
 
-const atualizarProduto = async(req, res) => {
-    const {descricao, marca_id, cor_id, modelo, tamanho, genero, estilo_id, preco} = req.body;
-    const {id} = req.params
+const atualizarProduto = async (req, res, next) => {
+    try {
+        const { descricao, marca_id, cor_id, modelo, tamanho, genero, estilo_id, preco } = req.body;
+        const { id } = req.params
     
-    const produto_alterado = {
-            
+        const produto_alterado = {
             descricao,
             marca_id,
             modelo,
@@ -78,30 +79,30 @@ const atualizarProduto = async(req, res) => {
             estilo_id,
             preco,
             updatedAt: new Date()
-          
-    }
-    const produtos = await Produtos.update(produto_alterado, {
-        where: {
-            id: id
         }
-    });
-    res.json(produtos);
-
-}
-
-    const  deletarProduto = async(req, res) => {
-        
-        const {id} = req.params
-        
-    const produtos = await Produtos.destroy({
+        const produtos = await Produtos.update(produto_alterado, {
             where: {
                 id: id
             }
         });
         res.json(produtos);
-
+    } catch (error) {
+        next(error);
     }
+}
 
+const deletarProduto = async (req, res, next) => {
+    try {
+        const { id } = req.params
+    
+        const produtos = await Produtos.destroy({
+            where: { id }
+        });
+        res.json(produtos);
+    } catch (error) {
+        next(error);
+    }
+}
 
 module.exports = {
     listarProdutos,

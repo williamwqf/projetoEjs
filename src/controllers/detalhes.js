@@ -1,9 +1,11 @@
-const fs = require('fs');
-const { cadprod } = require('../models/produtos');
+const { cadprod } = require('../db/models/produtos');
 
-const exibirProduto = (req, res) => {
-    console.log('ID:', req.params.id);
-    res.render('detalhes', { cadprod, index: req.params.id - 1 });
+const exibirProduto = (req, res, next) => {
+    try {
+        res.json({ cadprod, index: req.params.id - 1 });
+    } catch (error) {
+        next(error);
+    }
 }
 
 module.exports = {

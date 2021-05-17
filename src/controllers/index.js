@@ -1,16 +1,12 @@
-const { Produtos, Fotos, Marcas} = require('../models');
+const { Produtos, Fotos, Marcas } = require('../db/models');
 
-
-
-const index  = async (req, res, next) => {
+const index = async (req, res, next) => {
     const cadprod = await Produtos.findAll({
         raw: true,
         include: [
-            {model: Fotos},
-            {model: Marcas}
-    ]
-    
-
+            { model: Fotos },
+            { model: Marcas }
+        ]
     });
     const produtoFinal = [];
     for (const prod of cadprod) {
@@ -19,7 +15,7 @@ const index  = async (req, res, next) => {
             foto: `${prod.Fotos.nome_arquivo}.jpg`
         }
         produtoFinal.push(obj);
-        
+
     }
     console.log(cadprod);
     res.render('index', { cadprod, active: "active" });

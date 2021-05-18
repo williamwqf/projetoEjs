@@ -1,4 +1,4 @@
-const { buscaProdutos } = require('../models/produtos');
+const Produtos = require('../models/produtos');
 
 const listarProdutos = async (req, res, next) => {
     try {
@@ -12,7 +12,7 @@ const listarProdutos = async (req, res, next) => {
 const buscaProduto = async (req, res, next) => {
     try {
         const { id } = req.params
-        const produtos = await buscaProdutos(id);
+        const produtos = await Produtos.buscaProdutos(id);
         res.json(produtos);
     } catch (error) {
         next(error);
